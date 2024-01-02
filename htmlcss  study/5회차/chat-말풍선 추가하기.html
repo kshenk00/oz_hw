@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅방 만들기</title>
+    <link href="chat.css" rel="stylesheet">
+    <link href="text.css" rel="stylesheet">
+</head>
+<body> <!--맨 처음에 만드는 div는 모둔 것을 포람한 div이기에 class container-->
+    <div class="container">
+        <main class="chat-screen"> <!--main파트는(시맨틱태그는) 바로 친구부분부터 채탕화면까지의 부분-->
+            <section class="chat-screen_bar"><!--section도 시맨탁태그. main의 내용을 담는다-->
+                <div class="user">
+                    <div class="user_colum">
+                        <div class="user_pic"></div>
+
+                    </div>
+                    <div class="user_colum">
+                        <p class="user_nic">친구</p>
+                        <p class="user_count">2</p>
+                    </div>
+                </div>
+            </section>
+
+            <ul class="chat-screen_texts">
+                <li class="text">친구야 반가워</li>
+                <li class="text">우리 언제 밥이나 먹자</li>
+                
+            </ul>
+        </main>
+
+        <form class="chat-form"> <!--채팅장 부분울 만들기 위한 부분-->
+            <section class="chat-form_field"> <!--이 부분은 채팅을 입력할 수 있는 공간과 그걸 보낼수 있는 버튼이 필요함-->
+                <textarea class="chat-form_msg"></textarea>
+                <input type="submit" value="전송" class="chat-form_bt">
+            </section>
+
+        </form>
+    </div>
+
+</body>
+</html>

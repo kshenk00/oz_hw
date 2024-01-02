@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>문서의 흐름(float)</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            color: black;
+            background-color: orange
+        }
+        .rels{
+            background-color: red;
+            position: relative; /*position: relative는 원래 있어야되는 위치를 기준으로 top을 해주면 50px만큼 아래로 내려간다*/
+            top: 50px; /*50px 만큼 아래로 내려간다*/
+            left: 50px;
+        }
+        .abs{
+            position: absolute; /*position: absolute는 문서의 흐름에서 제외한다 =  원래 있어야되는 위치 없게한다. 
+                                그래서 현재는 <div class="abs">1</div> 이 부분이 원래 있어야되는 곳에 없는것.
+                                postion 속성을 가진 요소를 기준으로 위치를 이동한다. 단, 상위 요소 중에 postion 속성을 가진 요소를가 없다면
+                                그냥 화면을 기준으로 이동한다*/
+            right: 50px;
+            top: 50px;
+        }
+        .scroll{
+            height: 1000px;
+        }
+        .fixed{
+            position: fixed; /*position: fixed도 문서의 흐름에서 제외된다. 원래 있어야 되는 위치를 무시하다.
+                                그리고 어떠한 상황에서도 정해진 위치에만 있는다*/
+            right: 50px;
+            bottom: 50px; /*그래서 스크롤을 내려도 떨어진 4번 박스는 계속 그 위치에만 있는다.*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="abs">1</div>
+    <div class="rels">2</div>
+    <div class="scroll">3</div> <!--화면에 스크롤을 만들어주는것-->
+    <div class="fixed">4</div>
+
+</body>
+</html>

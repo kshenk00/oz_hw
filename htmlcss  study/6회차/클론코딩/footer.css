@@ -1,0 +1,79 @@
+.footer { /*경계선*/
+    color: #515255;
+    border: 1px solid #C3C4C7;
+    padding: 0 1rem;
+}
+
+.footer_container {
+    max-width: 48rem;
+    margin: auto;
+}
+
+.footer_menu {
+    padding: 3rem 0;
+}
+
+.footer_apps { /*왼쪽에 있는걸 오른쪽으로 이동시키고 싶다. */
+    float: right;
+}
+
+
+.footer_appdown {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.footer_appbtn {
+    width: 18.75rem;
+    justify-content: space-between; /*버튼 2개의 사이를 띄어두다*/
+}
+
+.footer_appbtn button {
+    width: 48%;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer_nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 33%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 0.875rem;
+}
+
+.footer_nav ul:nth-child(3) {
+    margin-right: 15%; /*전체 부모 요소에서 15% 앱 다운로드와의 간격을 더 넓히기 위해*/
+}
+
+.footer_nav ul li {
+    margin-bottom: 1rem; /*서로 간의 사이가 벌어지는 효과*/
+}
+
+.footer_info {
+    padding: 1.5rem 0 6.25rem;
+    border-top: 1px solid #c3c4c7; /*윗 내용과의 경계를 위해 border-top 사용*/
+    color: #868B94;
+    line-height: 1.5;
+    font-size: .813rem;
+}
+
+@media screen and (max-width:768px) {
+    .footer_apps {
+        float: none; /*float: right으로 바꿔두었던것을 없애서 다시 왼쪽(원래 위치)으로 온다*/
+        display: flex;
+        margin-bottom: 1.25rem;
+    }
+
+    .footer_appbtn {
+        display: none;
+    }
+}

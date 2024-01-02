@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>diary</title>
+    
+    <style>
+        #page{
+            background-color: rgba(244, 202, 63, 0.286);
+            margin: 0; /* body의 기본 마진 제거 */
+            padding: 20px; /* 내용과 화면 경계 간 여백 조절 */
+            max-width: 100%;
+            height: auto;
+            border: 4px solid black;
+            
+            
+            text-align: center;
+    
+            /*border를 기준으로 안에 여백을 주고 싶을 때: padding 사용*/
+            padding: 10px;
+        }
+       
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        table, th, td {
+            border: 4px solid black;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+       
+        img{
+            max-width: 100%; /* 이미지가 너무 큰 경우 화면 크기에 맞게 조절 */
+            height: auto; /* 가로 비율을 유지한 채로 이미지 조절 */
+        }
+        .container{
+            margin-top: 20px; /* 위쪽 여백 조절 */
+            margin-bottom: 20px; /* 아래 테이블과의 간격 조절 */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="page">
+    <table border="1">
+        <tr>
+            <th>2023년 12월 11일</th>
+            <th>
+                날씨: 
+                <input type="radio" name="weather" id="sun">
+                    <label for="sunny">☀️</label>
+                <input type="radio" name="weather" id="cloud">
+                    <label for="cloud">☁️</label>
+                <input type="radio" name="weather" id="rain" checked>
+                    <label for="rain">🌧</label>
+                <input type="radio" name="weather" id="snow">
+                    <label for="snow">🌨️</label>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <p>🍀<u class="title">제목: 곽철이 팝업스토어 갔다 왔어요 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </u></p>
+                <img src="images/photo_6328071794950519315_y.jpg" alt="곽철이네팝업 사진">
+            </th>
+        </tr>
+    </table>
+    <div class="container">
+    <table border="1">
+        <tr>
+            <td>고</td><td>속</td><td>터</td><td>미</td><td>널</td><td>에</td><td>서</td><td></td><td>곽</td><td>철</td><td>이</td><td>네</td>
+        </tr>
+        <tr>
+            <td>팝</td><td>업</td><td>스</td><td>토</td><td>어</td><td>가</td><td></td><td>열</td><td>어</td><td>서</td><td></td><td>친</td>
+        </tr>
+        <tr>
+            <td>구</td><td>와</td><td></td><td>함</td><td>께</td><td></td><td>갔</td><td>다</td><td>왔</td><td>다.</td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>이</td><td>번</td><td></td><td>일</td><td>기</td><td>과</td><td>제</td><td>는</td><td></td><td>너</td><td>무</td><td></td>
+        </tr>
+        <tr>
+            <td>어</td><td>렵</td><td>다.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>점</td><td>점</td><td></td><td>더</td><td></td><td>어</td><td>려</td><td>워</td><td>지</td><td>는</td><td>거</td><td>같</td>
+        </tr>
+        <tr>
+            <td>다.</td><td>😭</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+    </table>
+</div>
+</div>
+    
+</body>
+</html>

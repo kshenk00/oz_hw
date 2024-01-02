@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 & window.prompt()</title>
+ 
+</head>
+<body>
+    <script>
+        let apple ;
+        apple = "사과"
+        let banana = '바나나'
+        console.log(apple + "&" + banana)
+        console.log("사과") //문자열을 표현할때는 ""으로 짝지어서 묶어야한다. 하지만 출력할땐 "" 없이 출력됨
+    
+        /*
+        const order = "아메리카노 1잔 & 라떼 2잔 주시요!"
+        alert(order)
+        */
+
+        /*
+        window.prompt("당신이 좋아하는 과일은?") //window.prompt(x)는 안에 내용을 쓰면 대화창에 x의 내용이 나온다.
+        */
+
+        let answer = prompt("당신이 좋아하는 과일은?") // let answer = prompt()을 하게 되면 내가 팝업창에 수박이라 입력하면 저기에도 수박이 대입이 돌것임
+        alert(answer) // alert(answer)으로 해주고 답변을 수박이 입력을 하면 경고창에 체리라고 적혀져있는 것 확인할수있음
+    </script>
+</body>
+</html>

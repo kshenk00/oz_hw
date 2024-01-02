@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 정의하고 호출하기</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script>  
+  //함수를 이용해서 웹페이지에다가 내용을 추가하는 작업을 해보자
+  //컨테이너 태크 안에 p태그를 생성하는 기능을 만들어볼거다. 기능을 원할때마다 재사용하기 위해서 덩어리를 만들것이다.
+    function createParagraph(){
+      const p = document.createElement("p") //p태그를 만들어서
+      p.textContent = "P 태그가 만들어졌습니다./새롭게 만들어진 문단 태그" //해당 내용을 입력하고
+      document.querySelector("#container").append(p) //입력한 p태그를 컨테이너태그에 추가하는 작업
+    }
+    createParagraph()
+    createParagraph()
+
+    // 함수 이름 짓기 규칙은 변수와 같다. but 기능을 정의하는 만큼, 동사를 주로 사용하자!
+    // 데이터를 저장을 할때는 명사를 하고 함수를 저장을 할때는 동사를 쓰는것이 좋다.
+
+    // 함수 선언식 방법🔽
+    function sayYes(){
+      console.log(1)
+      console.log(2)
+      alert("Yes!!") // 만약 해당 코드를 바로 사용을 하는것이 아니라 나중에 사용을 하고 싶을때 이렇게 보관해주는 방법이 있음
+    }
+
+    
+
+    // 함수 표현식 방법🔽
+    const sayNo = function(){
+      alert("No!!")
+      console.log(3)
+    }
+   
+     
+    
+  </script>
+</body>
+</html>

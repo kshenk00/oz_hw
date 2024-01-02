@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>양식을 만들고 입력 정보를 보내자</title>
+</head>
+<body>
+    <h1>설문조사 양식</h1>
+    <p>모든 항목을 빠짐없이 체크해주십시오</p>
+    <hr>
+    <main> 
+        <form>
+          <fieldset>
+            <legend>개인정보</legend>
+              <label for="name">이름</label>
+              <input type="text" 
+              name="name"
+              id="name">
+              <br>
+              <label for="email">이메일주소</label>
+              <input type="email" 
+              name="email"
+              id="email">
+          </fieldset>
+          <fieldset>
+            <legend>설문</legend>
+              <p>연령대가 어떻게 되십니까?</p>
+                <input type="radio" id="teen" name="age"> 
+                <label for="teen">10대</label>
+                <input type="radio" id="twenty" name="age">
+                <label for="twenty">20대</label>
+                <input type="radio" id="thity" name="age">
+                <label for="thity">30대</label>
+                <input type="radio" id="fourty" name="age">
+                <label for="fourty">40대</label>
+                <input type="radio" id="fifty" name="age">
+                <label for="fifty">50대</label>
+                <input type="radio" id="other" name="age">
+                <label for="other">그외</label>
+  
+              <p>학원을 선택할 때 가장 중요하게 생각하는 것은 무엇입니까? 모두 고르시오</p>
+                <input type="checkbox" id="location"  name="academy">
+                <label for="location">위치</label>
+                <input type="checkbox" id="price"  name="academy">
+                <label for="price">학원비</label>
+                <input type="checkbox" id="lecturer"  name="academy">
+                <label for="lecturer">강사</label>
+                <input type="checkbox" id="infra"  name="academy">
+                <label for="infra">시설</label>
+  
+          </fieldset>
+          <fieldset>
+            <legend>기타 의견</legend>
+              <textarea rows="5" cols="40" name="comment"></textarea>
+          </fieldset>
+          <input type="submit">
+        </form>
+      </main>
+      <hr>
+      <footer> 
+        <p>입력하느라 수고하셨습니다.</p>
+      </footer> 
+
+    
+    
+    
+</body>
+</html>

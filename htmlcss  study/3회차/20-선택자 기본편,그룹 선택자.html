@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>선택자 기본편</title>
+
+    <style>
+    
+       /*전체선택자*/
+        h2, p, li{
+            color: orange;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>춤의 장르</h2>
+    <p>무척 다양한 장르가 존재합니다</p>
+    <ul>
+        <!--비보잉, 팝핍,락킹은 힙합으로 묶을수가 있어서 class나 id 선택자로 묶을 수 있음. 해당 식별자로 묶기-->
+        <li class="hiphop">비보잉</li> 
+        <li class="hiphop" id="poppin">팝핍</li>
+        <li class="hiphop">락킹</li>
+        <!--id를 넣어서 고유한 식별자로 묶어주다-->
+        <li id="belly">벨리</li>
+        <li id="jazz">재즈</li>
+    </ul>
+</body>
+</html>

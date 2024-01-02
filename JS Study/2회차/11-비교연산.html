@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교 연산</title>
+</head>
+<body>
+
+  <script>  
+  /*
+    //💡window.parseInt: 숫자로만 구성되어있는 문자열을 진짜 숫자로 바꿔주는 메소드
+    let age = (prompt('당신의 나이는?'))
+    console.log(20 == age)  // 추상적 비교
+                            //문자열 비교 숫자열의 비교를 해보게 되면 true
+  */
+
+/*
+  //💡문자열으로도 내용이 같은지 비교를 해볼수있음
+  let name = prompt('당신의 이름은?') //이 이름을 문서의 화면에 추가를 하고 싶다. 그럴때 document.write() 사용
+  document.write(name) //document.write(): 우리 DOM에다가 코드를 추가할때 사용하는 메소드.
+  //()안에 name을 입력을 하게 되면 내 이름을 받아서>name에다가 저장을 하고 wrtite에다가 입력을 한다음에 화면(document)에다가 출력한다
+*/
+
+/*
+  //💡내 이름이 김보윤인지 아닌지를 확인해보는 방법
+  let name= prompt('당신의 이름은?')
+  document.write("강윤호" === name) //그럼 입력창에 김봉윤이라고 입력을 하면 화면에 false가 나온다.
+*/
+
+    let name = prompt('당신의 이름은?')
+    document.write(`사용자가 입력한 이름은 ${name}입니다.<br>`)
+    document.write(`우리가 찾던 사람인가? ${"김보윤" === name}`)
+
+
+  </script>
+</body>
+</html>

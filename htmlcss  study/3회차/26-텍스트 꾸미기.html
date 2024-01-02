@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>텍스트 꾸미기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Gowun Dodum', monospace;
+
+            /*구글>google font라고 검색을 하면 나오는 사이트 > 원하는 글꼴 클릭 > select regular 400 > 창에서 링크 내용 복사 > html에 복붙*/
+        }
+
+        html{
+            font-size: 8px;
+        }
+
+        body{
+            font-size: 32px;
+        }
+
+        #first{ /*p 태그의 글 기본 사이즈는 16px*/
+            font-size: 3rem;
+            font-weight: 100; /*font-weight는 글꼴의 두께를 나타낸다. 100: 제일 얇은 두께, 900: 제일 두꺼운 두께*/
+            line-height: 30px; /*line-height: 행높이, 텍스트 간 줄 간격을 넓히고 싶을때*/
+            text-align: center; /*text-align: 정렬 방법. 왼.오.가운데.양끝정렬(justify)*/
+        }
+
+    </style>
+</head>
+<body>
+    <p id="first">에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+    <p>에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+</body>
+</html>

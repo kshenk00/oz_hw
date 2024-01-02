@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>요소의 유형</title>
+    <style>
+        p{ 
+            display: inline-block; /*display: block으로 해주면 p태그의 기본값 // 
+                                display: inline을 하게되면 블록이 해제되고 마진이 사지고 자한테 필요한 2글자 공간을 차지함 
+                                display: inline-block은 width height적용 가능함
+                                display: none은 화면상에는 안보이는것으로 보임. 
+                                */
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>경제</p>
+    <p>정치</p>
+    <p>과학</p>
+    <p>생활</p>
+    <span>하하</span> <!--span은 인라인요소로 딱 쓰인만큼만 공간을 차지하는것이 보임. 
+                        그래서 위style display:block을 걸어주면 쭉 공간이 늘어나는것을 볼 수 있음-->
+</body>
+</html>

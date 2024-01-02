@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 동네에서 찾는 더덕 알바</title>
+    <style>  
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+        }
+        .flex{
+            display: flex; 
+        }
+
+        .main{
+            padding: 4rem 0 5rem; 
+        }
+    </style>
+        <link href="header.css" rel="stylesheet">
+        <link href="banner.css" rel="stylesheet">
+        <link href="footer.css" rel="stylesheet">
+        <link href="info.css" rel="stylesheet">
+        <link href="notice.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container" >
+        <header class="header"> <!--여기에 3가지 콘텐츠를 넣을거다. 1.당근마켓로고와 2.메뉴항목 3.입력창과 버튼-->
+            <div class="header-content flex">
+                <div class="header-content_logo">더덕마켓</div>
+                <nav class="header-content_nav flex"> <!--메뉴콘텐츠-->
+                    <ul>
+                        <li>중고거래</li>
+                        <li>동네가게</li>
+                        <li class="active">알바</li> <!--원래 페이지에서 현재 내가 보고 있는 곳이 어디일때 여기임을 표시하기 위해서 class를 줌 -->
+                        <li>부동산 직거래</li>
+                        <li>중고차 직거래</li>
+                    </ul>
+                </nav>
+                <div class="header-content_input flex"> <!--입력창과 버튼. 근데 너비가 좁아지면 입력창은: 돋보기, 입력버튼: 줄3개로 변하기에 총 4개를 사용해야돤다-->
+                    <span class="icon glass">
+                        <input type="button" value="&#128269;">
+                    </span>
+                    <span>
+                        <input type="text" class="search" placeholder="물품이나 동네를 검색해보세요">
+                    </span>
+                    <span class="icon menu">
+                        <input type="button" value="&#9776;">
+                    </span>
+                    <span>
+                        <input type="button" class="chat" value="채팅하기">
+                    </span>
+
+                </div>
+            </div>
+        </header>
+
+        <!--대문 이미지 info만들기.-->
+        <main class="main"> <!--아래로 스크롤로 묶여있어서 main으로 묶기-->
+            <section class="info">
+                <div class="info_text">
+                    <h1>우리 동네에서 찾는<br> 당근알바</h1>
+                    <p>걸어서 10분 거리의<br>동네 알바들 여기 다 있어요.</p>
+                </div>
+            </section>
+
+            <!--알바 구인 공고 항목 추가하기-->
+            <section class="notice">
+                <h2 class="notice_title">인기 더덕알바</h2>
+                <div class="notice_container flex">
+                    <article class="notice_item flex"> <!--article은 주요 콘텐츠 하나라는 시맨틱 테그-->
+                        <div class="notice_thumb"></div><!--thumb 이미지 넣는곳-->
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div>
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 배추서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                </div>
+
+                <!--배너만들기-->
+                <div class="banner flex">
+                    <div class="banner_text">더덕알바 이용방법이 궁금하다면 <br> 지금 바로 알아보세요!</div>
+                    <button class="banner_button">이용방법 알아보기</button>
+                </div>  <!--배너는 여기까지-->
+
+                <div class="notice_container flex">
+                    <article class="notice_item flex"> <!--article은 주요 콘텐츠 하나라는 시맨틱 테그-->
+                        <div class="notice_thumb"></div><!--thumb 이미지 넣는곳-->
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div>
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 배추서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                    <article class="notice_item flex">
+                        <div class="notice_thumb"></div> 
+                        <div class="notice_content">
+                            <div class="notice_content_title">더덕마켓 고객센터 단기계약직 모집(1달 계약직)</div>
+                            <div class="notice_content_address">주식회사 더덕서비스 - 서울특별시 송파구 잠실동</div>
+                            <div class="notice_content_pay">월급 3,000,000</div>
+                        </div>
+                    </article>
+                </div>
+
+                <!--배너만들기-->
+                <div class="banner flex">
+                    <div class="banner_text">더덕알바 이용방법이 궁금하다면 <br> 지금 바로 알아보세요!</div>
+                    <button class="banner_button">이용방법 알아보기</button>
+                </div>
+            </section>
+        </main>
+    </div>  
+
+    <footer>
+        <footer class="footer">
+            <div class="footer_container">
+                <section class="footer_menu"> <!--footer_menu는 맨 아래에서 윗부분을 표현-->
+                    <div class="footer_apps">
+                        <div class="footer_appdown">더덕마켓 앱 다운로드</div>
+                        <div class="footer_appbtn flex">
+                            <button>App Store</button>
+                            <button>Google Play</button>
+                        </div>
+                    </div>
+                    <nav class="footer_nav flex">
+                        <ul>
+                            <li>중고거래</li>
+                            <li>동네가게</li>
+                            <li>배추알바</li>
+                            <li>부동산 직거래</li>
+                            <li>중고차 직거래</li>
+                        </ul>
+                        <ul>
+                            <li>배추비지니스</li>
+                            <li>채팅하기</li>
+                        </ul>
+                        <ul>
+                            <li>자주 묻는 질문</li>
+                            <li>회사 소개</li>
+                            <li>인재 채용</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer_info">
+                    <div>
+                        <strong>대표</strong> 강윤호 | <strong>사업자번호</strong> 123-45-00687
+                    </div>
+                    <div>
+                        <strong>직업정보제공사업 신고번호</strong> 2023-대진대덕-0011
+                    </div>
+                    <div>
+                        <strong>주소</strong> 서울특별시 송파구 올림픽로 240
+                    </div>
+                    <div>
+                        <strong>전화</strong> 1588-8851 | <strong>고객문의</strong>cs@ddservice.com
+                    </div>
+                    <p>
+                        <strong>이용약관</strong>&nbsp; &nbsp;
+                        <strong style="color: #000000;">개인정보처리방첨</strong>&nbsp; &nbsp;
+                        <strong>위치기반서비스 이용약관</strong>&nbsp; &nbsp;
+                        <strong>이용자보호 비전과 계획</strong>&nbsp; &nbsp;
+                    </p>
+                </section>
+            </div>
+        </footer>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>의사요소와 의사 클래스</title>
+    <style>
+        .menu{
+            padding: 10px; /*안쪽 여백을 작게 만들어주다*/
+            border-bottom: 1px solid black;
+        }
+        .menu > li{ /*자식 요소로 inline-block을 주면 다 나란히 옆으로 나열됨. */
+            display: inline-block;
+            text-align: center;
+        }
+        li > a{ /*a는 인라인이여서 width가 안먹히기에 display: inline-block 사용. 그래서 사이가 벌어진것 확인 가능*/
+            display: inline-block;
+            width: 80px;
+            padding: 10px; /*<a> 요소 주위에 위, 아래, 왼쪽, 오른쪽 각각 10px의 여백을 만들어냅니다.*/
+            text-decoration: none; /*단어 밑에 있는 밑줄을 없애준다.*/
+        }
+
+        a:hover{ /*마우스를 가져다 대면 글씨는 흰색, 배경은 검정색으로 바뀌는것을 볼수가 있음*/
+            color: white;
+            background-color: gray; 
+        }
+        a:active{ /*마우스를 가져다 대면 글씨는 흰색, 배경은 검정색 > 클릭을 하면 배경은 검정색으로 바뀌는 효과*/
+            color: white;
+            background-color: black; 
+        }
+        li:nth-child(3){ /*형제중 3번째인 증권을 선택하겠다*/
+            font-size: 20px;
+        }
+
+        a::after{ /* a::after, a::before는 콘텐츠 뒤,앞에 라는 의미이다. 여기서 추가 및 스타일링이 가능함 =*/
+            content:"보기";
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">사전</a></li>
+        <li><a href="#">뉴스</a></li>
+        <li><a href="#">증권</a></li>
+        <li><a href="#">지도</a></li>
+    </ul>
+</body>
+</html>

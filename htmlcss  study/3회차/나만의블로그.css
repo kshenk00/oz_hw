@@ -1,0 +1,36 @@
+
+*{
+    text-align: center;
+    font-family: 'Gowun Dodum', monospace;
+}
+
+html{ /*사이트 백그라운드 배경색을 만들기*/
+    background-color: beige;
+    font-size: 16px;
+}
+
+body{ 
+    width: 640px; /*바디의 콘텐츠 크기를 줄여보기*/
+    margin: auto; /*margin: auto를 하게되면 어떤 환경에서도 설정해둔 가운데로 움직인다. 즉, 너비에서 남는 여박을 동일하게 분배.
+                    이 설정을 하지 않을 경우 width값으로만 움직임*/
+    
+}
+
+h1{
+    font-size: 40px;
+}
+
+img{ /*html에서 크기 조절이 아니라, 여기서도 가능함. width, height으로 설정 가능함*/
+    border-radius: 10px;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+#title{
+    text-align: center;
+}
+#first{
+    text-align: right;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>undefined, null, boolean, 그리고 window.confirm()</title>
+</head>
+<body>
+  
+  <script>  
+    //undefined 예시
+    let name = undefined;  //let name;으로도 가능
+    console.log(name)
+    name = "김보윤"
+    console.log(name)
+
+    name = null; //나 이름이 없다고 정의. 이거는 prompt으로도 가능함
+    console.log(name)
+    /* console.log(prompt("입력 테스트")) // 팝업창에서 취소를 누르면 개발자도구 콘솔에서는 null이라 표시됨. 이런식으로 사용이 될수있음 */
+
+    //불리언 예시
+    console.log(true)
+    console.log(false)
+
+    /*
+    // confirm은 확인하거나 취소하거나 둘중 하나만 제시하는 다이얼러그 창이다
+    window.confirm("기분이 좋으시나요?")  //확인을 누르면 true, 취소를 누르면 false
+    */
+
+    //window.confirm("기분이 좋으시나요?") 확인을 누르면 true, 취소를 누르면 false 부분을 확인해보자
+    let answer = confirm("기분이 좋으시나요?")
+    /* console.log(answer) */answer
+    console.log(`현재 사용자는 기분이 좋나요? ${answer}` )
+
+
+  </script>
+</body>
+</html>

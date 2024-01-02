@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정보 입력받고 출력하기</title>
+    <style>
+        #hobby{
+            color: blueviolet;
+        }
+    </style>
+ 
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+
+    <script>
+        const nameElement = document.querySelector('#name');
+        let name = prompt('당신의 이름은?');
+        nameElement.textContent = name; //nameElement에다가 텍스트 콘텐트를 변경한다라는 입력을 추가로 해줄 수 있음
+        /*내가 입력받은 name을 textContent에다가 대입하는 처리를 하면, 그 결과가 화면에 출력됨*/
+
+        const hobbyElement = document.querySelector('#hobby');
+        let hobby = prompt('당신의 취미는?');
+        hobbyElement.textContent = `취미는 ${hobby}입니다!`
+
+        document.querySelector('#song')
+        .textContent = `좋아하는 곡은 ${prompt("좋아하는 곡은?")}입니다!`
+
+        
+    </script>
+</body>
+</html>

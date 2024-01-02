@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>배경을 깔아보다</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 20px double green;
+            padding: 20px;
+
+            /* background-color: yellowgreen; /*3가지 영역 모두 색을 칠해줌*/ */ 
+            background-clip: border-box;
+            /* background-clip
+            border-box: 경계선까지
+            padding-box: 안쪽 콘텐츠영역부터 패딩까지 범위를 사용
+            content-box: 콘텐츠 영역에서만 배경을 표시함
+            */
+
+            background-image: url(images/ㄴㄴ.jpg);
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            /*배경 사진을 테두리사이즈보다 작은 범위가 입렫되면 바둑판 형식으로 된다. 이때 이걸 원치 않으면 repeat 사용*/
+
+            background-origin: content-box; /*content-box는 콘텐츠 박스에서부터 시작됨*/
+            background-position: center; /*top,botton,center,left bottom등 위치 선정 가능,  100px 50px도 가능*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

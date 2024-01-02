@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문 만들기</title>
+</head>
+<body>
+
+  <h1></h1>
+  <p></p>
+
+  <script>  
+    const h1 = document.querySelector("h1")
+    const p = document.querySelector("p")
+
+    const isThere = confirm("제목 표시를 할까요?") //confirm을 이용하게되면 사용자로부터 확인,취소 중 하나를 받아거 그건을 참 또는 거짓으로 반환한다
+    
+
+    // 💡만약 if(isThere)가 참이면(확인을 누르면), h1.textContent = "당신이 내야 할 버스 요금은?" 내용이 화면에 표시됨. 
+    // 취소(false)를 누르면 아무것도 표시되지 않고 그냥 넘어감
+    if(isThere){ 
+      h1.textContent = "당신이 내야 할 버스 요금은?"
+    } 
+
+
+    const age = parseInt(prompt("나이가 어떻게 되시나요?")) //나이를 숫자로 받을것이기 때문에 parseInt 써주기
+  /*
+    if(age >= 20){ //만약에 나이가 20보다 크거나 같다면, 즉 참이면 {}안에 있는 내용을 수행한다.
+      p.textContent = "1250원입니다!"
+    }else{ //그렇지 않다면 {}의 내용의 수행
+      p.textContent = "760원입니다!"
+    }
+  */
+
+    if(age >= 20){ //만약에 나이가 20보다 크거나 같다면, 즉 참이면 {}안에 있는 내용을 수행한다.
+      p.textContent = "1250원입니다!"
+    }else if (age >=8){//else if는 age가 20보다 크지 않아서 여기로 넘어오는것. 그래서 여기에는 20보다 작은 애들의 조건을 세분화하는것
+      p.textContent = "760원입니다!"
+    }else{  //여기는 20살도 안되고 8살도 안되는 나머지를 적어주면 된다.
+      p.textContent = "버스요금 무료입니다!"
+    }
+
+  </script>
+</body>
+</html>

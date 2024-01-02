@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈사람 만들기</title>
+    <style>
+        html{
+            background-color: rgb(144, 210, 231);
+        }
+       body{
+        text-align: center;   
+        justify-content: center;
+        align-items: center;
+        
+            
+        }
+        .hat1{
+            width: 50px;
+            height:50px;
+            background-color: black;
+            left:115px;
+            position:relative;
+            top: 17px;
+        }
+        .hat2{
+            width:80px;
+            height: 15px;
+            background-color: black;
+            position: relative;
+            left:100px;
+            z-index: 9;
+            top: 17px;
+        }
+        .face{
+            width: 90px;
+            height:90px;
+            background-color: white;
+            border-radius: 70px;
+            position: relative;
+            left: 95px;
+            top:12px;
+        }
+        .eye-right{
+            background-color: black;
+            width:13px;
+            height:13px;
+            border-radius: 10px;
+            position: relative;
+            left:30px;
+            top:25px;
+            z-index: 9;
+        }
+        .eye-left{
+            background-color: black;
+            width:13px;
+            height:13px;
+            border-radius: 10px;
+            position: relative;
+            left:55px;
+            top:11px;
+            z-index: 9;
+        }
+        .mouth{
+            width: 30px;
+            height:10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: black;
+            position: relative;
+            top:30px;
+            left:33px;
+            z-index: 10;
+        }
+        .body{
+            width: 120px;
+            height:120px;
+            background-color: white;
+            border-radius: 70px;
+            position: relative;
+            left: 85px;
+            bottom: 12px;
+        }
+
+        .button1{
+            background-color: black;
+            width:10px;
+            height:10px;
+            border-radius: 10px;
+            position: relative;
+            top:40px;
+            left: 55px;
+            z-index: 10;
+        }
+        .button2{
+            background-color: black;
+            width:10px;
+            height:10px;
+            border-radius: 10px;
+            position: relative;
+            top: 70px;
+            left:55px;
+            z-index: 10;
+        }
+        .foot{
+            width: 145px;
+            height:145px;
+            background-color: white;
+            border-radius: 70px;
+            position: relative;
+            left: 75px;
+            bottom: 14px;
+        }
+        .hand-right{
+            width:80px;
+            height:10px;
+            background-color: rgb(165, 95, 42);
+            transform: rotate(33deg);
+            position: relative;
+            left:19px;
+            top:10px;
+            z-index: 1;
+        }
+        .hand-left{
+            width:80px;
+            height:10px;
+            background-color: rgb(165, 97, 42);
+            transform: rotate(149deg);
+            position: relative;
+            left:195px;
+            top:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="hat">
+        <div class="hat1"></div>
+        <div class="hat2"></div>
+    </div>
+
+    <div class="face">
+        <div class="eye-right"></div>
+        <div class="eye-left"></div>
+        <div class="mouth"></div>
+    </div>
+    <div class="hand">
+        <div class="hand-right"></div>
+        <div class="hand-left"></div>
+    </div>
+
+    <div class="body">
+        <div class="button1"></div>
+        <div class="button2"></div>
+    </div>
+
+    <div class="foot"></div>
+
+   
+    
+</body>
+</html>

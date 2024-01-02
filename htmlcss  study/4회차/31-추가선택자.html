@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>추가 선택자</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        *: 값의 포함 여부
+        ^: 값의 시작 여부
+        $: 값이 끝 여부
+        */
+        img[width $="0"]{ /*img{}만 하면 모든 이미지에 적용이 되지만, 특정 이미지에만 주고 싶다하면 img[]{}으로 해주면 된다*/
+            /*width *="2"는 width에 2가 포함된 것을 적용*/ /*width $="0"는 0으로 끝나는 것*/
+            border: 5px dashed red;
+
+        }
+
+        /*P em: p 밑에 있는 em, 아무거나 상관이 없음 -> 하위 요소선택하기.*/
+        p > em{ /*자식 요소 예시*/ /*P > em: p 밑에 있는 em 중에서 한단계 밑에 있는 것만 선택한다. -> 자식요소 선택하기*/
+            color: blue;
+        }
+
+        #sam + p{ /*내 바로 뒤에 있는 형제 누구라는 뜻*/ /*인접형제 예시*/
+            color: orange;
+        }
+
+        #sam ~ p{ /*형제 요소 예시. 이건 모둔 형제 p를 의미*/
+            color:blueviolet;
+        }
+
+    </style>
+</head>
+<body> <!--img와 p는 서로 형제 요소이다. 총 7가지 형제 요소를 가지고 있음-->
+    <img src="../3회차/images/ㄴㄴ.jpg" width="120" alt="바다">
+    <img src="../3회차/images/ㄴㄴ.jpg" width="120" >
+    <img src="../3회차/images/ㄴㄴ.jpg" width="120" id="sam">
+    <p>대전은 유노코딩의 고행이자, 현 거주지이기도 합니다.</p>
+    <p>대전광역시 유성구에는 대전의 랜드마크 한빛탑이 있습니다.</p>
+    <p>엑스포다리 아래에는 대전 3대하천 중 하나인 갑천이 흐릅니다</p>
+    <p>한빛탑 맞은편에는 <em>엑스포다리</em>가 있습니다.</p>
+
+</body>
+</html>

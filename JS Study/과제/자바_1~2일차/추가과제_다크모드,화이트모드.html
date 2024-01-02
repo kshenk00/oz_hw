@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크모드,화이트모드</title>
+
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white; /*배경이 검정일때는 글씨가 흰색*/
+        }
+        .white-mode {
+            background-color: white;
+            color: black; /*배경이 흰색일때는 글씨가 검정*/
+        }
+        button{
+            box-sizing: border-box;
+            width: 70px;
+            height: 40px;
+        }
+    </style>
+ 
+</head>
+<body>
+    <button onclick="darkMode()"><b>Dark mode</b></button> <!--onclick은 버튼이 눌릴수 있게 해준다-->
+    <button onclick="whiteMode()"><b>White mode</b></button>
+    <button onclick="bothMode()" id="button"><b>One button</b></button>
+    <script>
+        
+        function darkMode(){
+            var body = document.body; // 문서의 body 요소를 변수 body에 할당합니다.
+            body.classList.add("dark-mode"); //classList 속성은 요소의 클래스에 액세스할수 있게 해줌. 
+            body.classList.remove("white-mode"); //다크모드를 눌렀을때 배경이 흰색으로 되는걸 막기위해
+            
+        }
+        function whiteMode(){
+            var body = document.body;
+            body.classList.toggle("white-mode"); 
+            // toggle 메서드는 클래스가 존재하지 않으면 추가하고, 이미 존재하면 제거합니다. 클래스가 이미 존재하면 제거하고, 존재하지 않으면 추가합니다.
+            //body.classList.toggle("dark-mode");를 호출하면 "dark-mode" 클래스가 이미 존재하는지 확인하고, 존재하면 클래스를 제거하고, 존재하지 않으면 클래스를 추가합니다. 
+            //이것은 토글 효과를 만들어서 이 함수를 반복 호출함으로써 다크 모드와 일반 모드 간을 전환할 수 있게 합니다.
+            body.classList.remove("dark-mode");
+            
+        }
+
+        function bothMode(){
+            var body = document.body;
+            body.classList.toggle("dark-mode"); 
+            
+            
+        }
+        
+
+
+        // 버튼 하나로만 만들어서 다크모드 화이트모드 전환을 할시
+        function bothMode(){
+            var body = document.body;
+            body.classList.toggle("dark-mode"); 
+        
+        
+        // 버튼 하나로만 만들어서 다크모드 화이트모드 전환을 할시
+        var button = document.getElementById("button");
+        if(button.innerHTML=="Dark Mode"){ // innerHTML이 다크모드이면
+            button.innerHTML = "Light Mode"; // Light모드로 변경을하자
+        } else {
+            button.innerHTML = "Dark Mode"; // 그렇지 않을경우 다크모드로 변경을 하자
+        }
+        }
+
+        /*
+        getElementById("button"): 이는 document 객체의 메서드입니다. 이 메서드는 고유한 ID 속성을 기반으로 HTML 요소를 선택하고 검색하는 데 사용됩니다. 
+        이 경우 "button"이라는 ID를 지정했으므로 메서드는 문서에서 ID가 "button"인 HTML 요소를 찾습니다.
+
+        var button = ...: 이 코드는 var 키워드를 사용하여 button이라는 변수를 선언합니다. 
+        이 변수는 document.getElementById("button")에서 반환된 값, 즉 "button"이라는 ID를 가진 HTML 요소에 대한 참조를 할당받습니다.
+
+        이제 변수 button은 ID가 "button"인 버튼 요소에 대한 참조를 보유하고 있습니다. 
+        이 참조를 사용하여 JavaScript에서 버튼 요소를 조작할 수 있으며, 버튼의 속성, 내용을 변경하거나 이벤트에 응답하는 등의 작업을 수행할 수 있습니다.
+        */
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스 레이아웃</title>
+    <style>
+        *{
+            box-sizing: border-box; /*크기 계산은 보더박스로 하겠음.  콘텐츠 크기가 고정되고 패딩과 테두리가 추가되어도 전체 크기가 더해지지 않고 그대로 유지*/
+        }
+        body{
+            margin: 0;/*body의 바깥 여백을 없애서 페이지의 가장자리에 여백이 없도록 설정합니다.*/
+        }
+        ul{
+            padding: 0; /*목록의 안쪽 여백을 없앱니다.*/
+            list-style-type: none; /*목록의 기본 스타일(점)을 제거*/
+            height: 200px; /*목록의 높이를 200픽셀로 설정*/
+            
+            display: flex; /*flex는 공간이 좁아지면 너비가 좁아진다. flex item 일차원적으로 한방향으로 진행이 되어야되서 공간이 좁아지면 너비가 지그러진다. 수평 또는 수직으로 배치하고 간격을 조절하는 데 사용됩니다.*/
+            
+            align-items: center; /*align-items: stretch 기본값. 어디에 위치시킬것인가. flex container가 자식들을 어떻게 배치할지 결정하는것*/
+        }
+
+        li{
+            background-color: rgb(0, 255, 47);
+        }
+        li:nth-child(2n){
+            background-color: burlywood;
+        }
+     
+        li:nth-child(2){
+            flex-grow: 1; /*해당 flex item이 다른 친구들에 비해서 더 커질수가 있다는 것을 의미.  상대적으로 커진다. 그래서 해당건만 상대적으로 나머지 여백을 다 사용하는것을 볼수가 있음*/
+            /*
+            flex-shrink: 공간이 부족해서 찌그러질때 내가 더 줄어들거다>더 찌그러트려준다.
+            flex-basis: flex-item의 기본 크기, 초기값을 가지고 배치를 진행한다
+            */
+        }
+        li:nth-child(4){
+            flex-grow: 1; /*해당 flex item이 다른 친구들에 비해서 더 커질수가 있다는 것을 의미.  상대적으로 커진다. 그래서 해당건만 상대적으로 나머지 여백을 다 사용하는것을 볼수가 있음*/
+            
+        }
+        li:nth-child(2n-1){
+            /*flex-basis: 100px; 
+            flex-grow: 1; */
+            
+            flex: 1 1 120px; /*단축속성으로, 홀수번째 요소들에 대해 flex-grow1, flex-shrink1 flex-basis120px을 하겠다. */
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>유노코딩이 짚앞 강가에서 목격한 동물들</h2>
+    <ul>
+        <li>물오리</li>
+        <li>물까치</li>
+        <li>고라니</li>
+        <li>누룩뱀</li>
+        <li>너구리</li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33-변형과 전환(transformation,transition)</title>
+    <style>
+        .parent{
+            display: inline-block; /*이것은 부모 요소가 다른 요소들과 나란히 표시되도록 합니다.*/
+            margin: 0 20px; /*좌우 여백을 설정합니다. 이것은 각 부모 요소들 간의 간격을 조정합니다.*/
+        }
+        .child{
+            width: 150px;
+            height: 150px;
+            background-color: teal;
+        }
+
+        /* TRANSFORM: x축과 y축의 너비와 높이의 수치를 바꿔서 요소의 모양을 바꾼다.
+        .parent:nth-child(1) > .child {transform: translate(30px, 50px);}
+         →parent:nth-child(1)는 parent형제 중에서 몇번째를 선택할수있음 / .parent:nth-child(1) > .child 첫번째 자식을 선택
+        .parent:nth-child(2) > .child {ransform: scale(1.2, 0.8);} →원하는 값만큼 위치를 이동시킨다. x축이 커지면 오른쪽으로, y축이 커지면 아래쪽으로 간다.
+        .parent:nth-child(3) > .child {transform: skew(45deg);} →확대 또는 축소 가능함
+        .parent:nth-child(4) > .child {transform: rotate(45deg);} →회전을 하다. 값을 각도로 받음. 회전은 시계방향으로 된다
+        */
+
+        /*transition*/
+        .parent:nth-child(4) > .child:hover{ /*여기에 마우슬 얹혔을때*/
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            transition: background-color 2s 0s linear /*duration 2초, delay는 0초 속도는 linear*/,
+            height 2s 0s linear /*height도 추가로 효과를 줄 수 가 있음*/;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

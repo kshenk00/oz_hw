@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        div.box{
+            width: 150px;
+            height: 150px;
+            background-color: teal;
+        }
+
+        /*media 뒤에는 media 타입이 들어가는데, 모바일등을 위한 개발이면 screen*/
+        /*@media screen and (max-width:800px 화면이 800보다 작을때는 이렇게 하겠다 의미, min-width: 촤소 몇보다 크면*/
+        @media screen and (min-width:800px){
+            div.box{
+                background-color: orange;
+            }
+        }
+        @media screen and (min-width:1000px){
+            div.box{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

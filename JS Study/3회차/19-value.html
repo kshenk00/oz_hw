@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 & 이벤트 핸들링</title>
+</head>
+<body>
+
+  <input id="talk"><input id="push" type="button" value="생성">
+
+  <form id="form">
+    <input name="name">
+    <input name="nick">
+    <input type="submit">
+  </form>
+  
+  <script> 
+
+  /*
+    const input = document.getElementById("talk")
+    const button = document.getElementById("push")
+
+    //input에서 내가 키보드 타이핑을 했을때
+    input.addEventListener("keyup", function(e){  //e.target는 input을 가리킨다. e.target.value는 내가 키보드 타이핑을 할때마다 기록이 된다
+     console.log(e.target.value)
+    }) //keyup이벤트는 키보드 작성을 하다가 손을 뗐을때 발생하는 이벤트
+    
+    button.addEventListener("click", function(e){
+      const p = document.createElement("p")
+      p.textContent = input.value
+      document.body.append(p)
+    })
+
+    */
+    
+    const form = document.getElementById("form")
+    form.addEventListener("submit", function(event){ //내가 이벤트(submit)을 form에서 할때마다 무엇을 하겠다 의미
+      event.preventDefault() //원래 하려던것을 안하겠다는 의미. 기본적인것을 안히겠다. 즉, 새로고침을 안하겠다라는 의미
+      const p = document.createElement("p")
+      p.textContent =`${event.target.name.value}의 별명은 ${event.target.nick.value}`
+      document.body.append(p)
+    }) 
+
+  
+  </script>
+</body>
+</html>

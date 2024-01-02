@@ -1,0 +1,40 @@
+.chat-screen_texts{
+    padding: 0;
+    list-style-type: none; /*목록 타입에 list-style-type: none을 주게 되면 list의 기호가 사라진다.*/
+}
+.chat-screen_texts .text { /*각각의 말풍선을 갖출수 있게 스타일 추가*/
+    background-color: antiquewhite;
+    width: 280px;
+    height: 50px;
+    margin: 0 0 10px 0; /*마진을 밑에만 조금 주기 위한 스타일*/
+    padding: 10px; /*앞쪽에 너무 붙어있어서 이 부분을 띄우기 위한 것*/
+    border-radius: 10px;
+    line-height: 30px;
+    /*line-height:행 높이*/ 
+    /*height: 50, padding: 10이기에 위 아래로 20. 50-20=30. 30만큼 남는 부분을 line-height가 패딩 외 남는 공간을 text가 가져간다. 그래서 가운데 위치한것을 볼 수 있음*/
+    position: relative; /*박스가 너무 왼쪽에 붙어 있는것을 볼수가 있어서 position: relative을 이용해서 조금 이동을 시킨다*/
+    left: 20px;
+}
+
+/*의사요소를 이용해서 말풍선의 꼬리 만들기*/
+.chat-screen_texts > .text::after{
+    content: "";
+    border-right: 16px solid antiquewhite;
+    border-bottom: 16px solid transparent; /*삼각형 아래쪽을 없애기 위해 transparent 사용해서 투명하게 만들어준다*/
+
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+/*동적인 효과를 말풍선에 해보자. 물풍선에 마우슬 얹혔을때 효과*/
+.chat-screen_texts > .text:hover{
+    background-color: rgb(247, 208, 160);
+    transition: background-color 1500ms 200ms ease-in; /*1.5초동안 delay 2초로 점차 빨라지게 하는 효과*/
+
+}
+.chat-screen_texts > .text:hover::after{ /*마우스가 얹혀진 말풍선의 의사요소라는 뜻*/
+    border-right: 16px solid rgb(247, 208, 160);
+    transition: border-right 1500ms 200ms ease-in; 
+}
+

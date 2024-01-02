@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별트리 찍기</title>
+    <style>
+        h3_1::after {
+            content: '\A'; /* '\A'는 줄 바꿈 문자를 나타냅니다. */
+            white-space: pre; /* pre 형식의 공백 처리를 지정합니다. */
+        }
+    </style>
+ 
+</head>
+<body>
+    <h1>별 트리 찍기</h1>
+    <script>
+        const h3 = document.createElement("h3")
+        h3.textContent = "1번 별"
+        document.body.appendChild(h3)
+        for (let i = 0; i < 5; i++ ){
+            for(let j= 0; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+            
+        }
+
+        const h3_2 = document.createElement("h3_1")
+        h3_2.textContent = "2번 별"
+        document.body.appendChild(h3_2)
+        for (let i = 0; i < 5; i++ ){
+            for(let j= 0; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+            document.write("<br>");
+        for (let i = 4; i >= 0; i--){
+            for(let j= 0; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+            
+        }
+    </script>
+</body>
+</html>

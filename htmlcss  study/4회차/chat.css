@@ -1,0 +1,87 @@
+/*전체적인 세팅부터*/
+*{  /*box-sizing: border-box으로 할 경우 width나 height를 사용할 경우 padding 이나 border는 그 안에서만 커진다*/
+    box-sizing: border-box;
+}
+html{ /*html이 속한 영역은 웹브라우저 전체 화면으로, 이렇게 100% 적용을 하면 화면 전체에 스타일을 채우겠다는 의미이다.*/
+    height: 100%;
+}
+body{ /*body도 100%해주게되면 꽉 찬다. 질문:근데 왜 body도 필요한지? html에 이미 다 전체 적용된게 아닌지?.*/
+    height: 100%;
+    margin: 0px; /*body는 기본으로 마진이 있음. (개발자 도구로 확인을 하면 주황색 부분), 그래서 이 마진을 없애고 싶을때  margin: 0px*/
+} 
+.container{
+    height: 100%;
+    background-color: #fcc41f; /*rgb 색상표를 검색해서 하면 나온다*/
+}
+
+/*스크린 크기 조정을 해보자 -> main부분, 채팅 입력창 부분을 제외한 나머지 부분.*/
+.chat-screen{
+    height: calc(100% - 120px); /*height: calc(100%-120px)는 전체에서 내가 원하는 부분을 제외한 부분을 하고 싶을때
+                                전체(100%)-원하는 만큼의(120px, 채팅창을 입력하는 부분을 이만큼 쓰고 싶음)*/
+}
+
+/*유저 정보 표시되는 부분, 즉 윗부분을 표시하는 칸*/
+.user{
+    background-color: #ffffff;
+    padding: 16px; /*여백의 미를 가지기 위해 padding 사용*/
+    height: 80px; /*높이가 너무 높아서 80px을 줬음*/
+}
+.user_colum{
+    float: left;
+
+}
+.user_pic{ 
+    /*친구와 2는 밑으로 떨어짐. 이유는 블록이여서 밑으로 떨어진다. 그래서 <div class="user_colum"> 묶은 부분을 float으로 위에서 스타일 적용울 해주면 된다.*/
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* 옆에 요소를 조금 띄우고 싶어서 사용 */
+    border-radius: 10px;
+    background-color: #fcc41f;
+}
+.user_nic, .user_count{
+    margin: 5px;
+}
+.user_count{
+    font-size: 12px;
+    color: gray;
+}
+
+/*채팅입력창 만들가*/
+.chat-form{
+    height: 120px;
+    background-color: white;
+}
+.chat-form_field{
+    height: 120px; /*height를 줘도 아무런 변화가 없음. 여러 콘테이너를 겹쳐서 똑같이 지정을 해준것*/
+}
+
+/*메세지 쓰는 곳을 만들기*/
+.chat-form_msg{
+    float: left; /*메세지박스와 버튼이 크기때문에 서로 떨어질수가 있는데, float으로 양옆으로 붙일수 있음*/
+    width: calc(100%-120px); /*버튼 크기를 제외하고 나머지 부분을 메세지 쓰는 곳으로 만들고 싶어서 calc사용*/
+    height: 120px;
+    border: none;
+    resize: none; /*text-area 속성에서 박스 크기를 자유롭게 줄일수 있는데 이걸 막는 방법이다*/
+    font-size: 24px;
+    padding: 10px; /*박스안에 문자를 입력을 할때 앞에 여백이 있게 입력이 된다*/
+}
+
+.chat-form_msg:focus{
+    outline: none; /*이렇게 하면 마우스가 메세지창에 가더라도 아웃라인이 되는것을 없애준다*/
+}
+
+/*버튼*/
+.chat-form_bt{
+    float: right;/*메세지박스와 버튼이 크기때문에 서로 떨어질수가 있는데, float으로 양옆으로 붙일수 있음, 이렇게 위, 아래로 적용을 해주면 문서의 흐름을 무시함*/
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #fcc41f;
+    font-size: 18px;
+}
+
+/*메세지입력창과 버튼에 의사클래스 적용을 해보겠음*/
+.chat-form_bt:active{ /*버튼을 클릭을 했을때 전송했다는 느낌을 주고 싶다*/
+    background-color: #cb9d12; /*클릭을 하면 더 진해자는 느낌*/
+
+}

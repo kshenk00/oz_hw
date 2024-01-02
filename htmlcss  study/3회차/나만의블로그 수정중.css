@@ -1,0 +1,45 @@
+* {
+    
+    font-family: 'Gowun Dodum', monospace;
+}
+
+html {
+    background-color: beige;
+    font-size: 16px;
+}
+
+body {
+    width: 640px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+img {
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+#introduce{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+#drama{
+    line-height: 25px;
+}
+
+#tmi{
+    ine-height: 30px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인수 & 반환</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script>  
+      console.log(createParagraph("함수 정의 시 매개변수를 포함시키고", "red"))
+      console.log(createParagraph("함수 호출 시 매개변수의 개수만큼 인수를 전달하면", "green"))
+      console.log(createParagraph("세번째 문단도 잊지 인수가 매개변수에 대입되어 기능을 수행합니다", "blue"))
+
+    
+
+    function createParagraph(content, color){
+      const p = document.createElement("p")
+      p.style.color = color // 매개변수에 color라고 하게되면 색을 줄수가 있다.
+      p.textContent = content
+      document.querySelector("#container").append(p)
+
+      return `방금 만들어진 태그의 콘텐츠: ${content}, 색상: ${color}` // p태그를 하나 만들때마다 내가 만든 p태그에 재한 정보가 이 함수로부터 반환되게끔 해보자
+      // 이렇게 해주면 createParagraph는 동작을 수행한 다음에 자기가 있었던 호출문 자리에 내가 어떻게 만들어졌는지에 대한 정보를 남기고 떠난다. 
+      // 위 부분을 console.log으로 묶어서 확인해볼수있음. 하나가 만들어질때마다 콘솔에 거기에 대한 상세정보가 나오는것도 확인 가능함. (인수전달을 한다?)
+    }
+
+    
+
+  </script>
+</body>
+</html>

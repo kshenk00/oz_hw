@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체를 만드는 생성자</title>
+</head>
+<body>
+
+  <script> 
+  // 함수인데, 댇ㅔ를 생성할 목적으로 정의하는 함수, 설계도 개념
+  // js에서 기본적으로 제공하지 않는 데이터 유형을 직접 만들 수 있다.
+    
+  //bestSinger라는 객체 자료형을 만들어 보고 싶다. 생성자함수 만들기
+  function BestSinger(){
+    this.name = "VOS"
+    this.member = "박지헌, 최현준, 김경록"
+    this.singing = function(){ //메소드도 추가해보기
+        console.log("니 이름 불렀나 봐~ 나 술에 취해서~")
+      }
+  }
+
+  const vos = new BestSinger()
+  console.log(vos.name)
+  console.log(vos.member)
+  vos.singing()
+  
+
+  //매개변수를 포함한 생성자를 만들어보자
+  function Singer(name, member){
+      this.name = name
+      this.member = member
+      this.singing = function(lyrics){
+        console.log(lyrics)
+      }
+    }
+
+    const noel = new Singer("노을", "강균성, 전우성, 이상곤, 나성호")
+    console.log(noel.name)
+    console.log(noel.member)
+    noel.singing("붙잡고도 싶었지만 나도 결국엔 안될 걸 알기에")
+  </script>
+</body>
+</html>

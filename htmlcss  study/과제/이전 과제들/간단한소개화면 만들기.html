@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 소개 화면 만들기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Acme', sans-serif;
+            font-family: 'Gowun Dodum', sans-serif;
+            box-sizing: border-box;
+        }
+        html{
+            background-color: bisque;
+        }
+        body{
+            height: 50px;
+            margin: 0;
+            padding: 15Px;
+        }
+        .container{
+            background-color: #fff; /* Set the background color to white */
+            border: 1px solid #fff; /* Add a border for separation */
+            padding: 0px; /* Add padding for some space between content and the box */
+            margin: 5px; /* Add margin to create space around the box */
+            border-radius: 10px;
+            display: flex;
+            
+            
+            height: 300px;
+            
+        
+        }
+        .sidebar{
+            float: left;
+            border: 0;
+            background-color: yellow; /* Set the background color to yellow */
+            padding: 0px; /* Add padding for some space between content and the box */
+            margin: 0px; /* Add margin to create space around the box */
+            border-radius: 10px;
+            width: 300px;
+            overflow: scroll;
+            text-align: center;
+            /*질문: 겉에 흰 테두리 없애는 방법*/
+        }
+
+        .list{
+            float: right;
+            width: 50%; /* Adjust the width as needed */
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <p>😁</p>
+            <h1>Fun Sidebar</h1>
+            <p>Enjoy your time here</p>
+            
+            <p>🎮 Play a game</p>
+            <p>🎶 Listen to music</p>
+            <p>📽️ Watch a movie</p>
+            <p>🎨 Draw Someting</p>
+            <p>🤣 Tell a Joke</p>
+            <P>☕ Grab a Coffee</P>
+        
+        </div>
+        <div class="list">
+            <h1>즐거운 초격차 교실!</h1>
+            <p>List of movies I want to watch</p>
+            <p>🔱 Aquaman and the Lost Kingdom</p>
+            <p>✨ Wish</p>
+            <p>🍫 Wonka</p>
+
+        </div>
+    </div>
+    
+</body>
+</html>

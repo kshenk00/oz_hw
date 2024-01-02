@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+        }
+        .flex{
+            display: flex; /*하나같이 flex container로 만들겠다는 지정*/
+        }
+
+        .main{
+            padding: 4rem 0 5rem; /*html 기준으로 4rem은 64px인데 왜 64의 여백이 필요하나:헤더의 크기가 64px이여서 서로 64이여야 서로 겹치지 않음, 5rem은 밑에 공간을 주고 싶어서*/
+        }
+
+        header.header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background-color: black;
+            color: white;
+        }
+
+        .header-content{
+            width: 100%;
+            max-width: 75rem; 
+            height: 4rem;
+            padding: 0.75rem 1rem;
+            justify-content: space-between;
+        }
+
+        .home{
+            font-size: 2rem;
+            font-weight: 500;
+            height: 1em; 
+            margin-right: 40px; 
+            line-height: 40px;
+        }
+
+        .header-content_nav{
+            align-items: center;
+            padding: 0 2.5rem 0 0; 
+            flex-grow: 1; 
+        }
+        .header-content_nav ul{ /*ul태그에서는 패딩과 마진이 필요없음*/
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .header-content_nav ul li{
+            display: inline-block; /*아래로 나열되어있는거 가로로 펼치기*/
+            margin-right: 30px; /*글씨 간 간격을 주기*/
+            font-size: 1.13rem; 
+            font-weight: 900;
+        }
+
+        .header-content_input{
+            justify-content:center; /*옹기종기 모여있게 만들어줄것임*/
+            align-items: center; /*수직에서 교차측에서 가운데 정렬됨. 조금 위에 붙애 있다가 조금 떨어지면 가운데 정려됨*/
+        }
+
+        .header-content_input .icon input{ /*미디어쿼리를 적용하기 전, 아이콘에 포함된 input들에 대해 없어지는 효과(너비가 줄어들때 다른 아이콘으로 바뀌기 전 작업)*/
+            /*아이콘 사이즈 조절과 안보이게 하기*/
+            margin-right: 1rem;
+            border: none;
+            padding: 0;
+            font-size: 1.5rem;
+            background-color: transparent;
+        }
+
+        .header-content_input .icon{
+            display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .header-content .home,
+            .header-content_nav {
+                display: none;
+            }
+            
+            .header-content_input .icon {
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+                width: 100%;
+                
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="header"> <!--여기에 3가지 콘텐츠를 넣을거다. 1.당근마켓로고와 2.메뉴항목 3.입력창과 버튼-->
+        <div class="header-content flex">
+            
+            <div class="home">홈</div>
+            <nav class="header-content_nav flex"> <!--메뉴콘텐츠-->
+                <ul>
+                    <li>소개</li>
+                    <li>서비스</li>
+                    <li>문의</li>
+                </ul>
+            
+            </nav>
+            <div class="header-content_input flex"> <!--입력창과 버튼. 근데 너비가 좁아지면 입력창은: 돋보기, 입력버튼: 줄3개로 변하기에 총 4개를 사용해야돤다-->
+                <span class="icon menu">
+                    <input type="button" value="🔮">
+                </span>
+                
+
+            </div>
+        </div>
+    </header>
+</body>
+</html>

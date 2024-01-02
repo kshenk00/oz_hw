@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수와 상수 그리고 대입</title>
+ 
+</head>
+<body>
+    <script>
+        let num = 5  // 이렇게 할 경우 코드를 좀 더 편하게 사용할수있음
+        console.log(num)
+        console.log(num)
+        console.log(num)
+
+        
+        let number;
+        number = 10;
+        console.log(number)
+
+        number = 18;
+        console.log(number)
+
+        number += 1
+        console.log(number) //위 저장되어있는 number 즉 18에서 1을 더해준다. 그래서 19
+
+        number -= 19
+        console.log(number) //위 저장되어있는 number 즉 19에서 0을 빼준다. 그래서 0
+
+        /*
+        //상수
+        let age = 20
+        age = 21 //여기서 나이는 let으로 선언한 변수여서 값을 언제든지 변경할수있다. 화면에서 아무런 변화눈 없지만, 에러는 없음
+        */
+    
+        /*
+        const age = 20 // age는 20이라는 숫자룰 상수가 된다. 그래서 아래에서 21의 값을 가질수없음
+        age = 21 // 이렇게 값을 주면 에러
+        */
+
+        const age = 20 // const 값을 바꿀수 없음
+        window.alert(age)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문_성적표</title>
+    <style>
+        table{ border-collapse : collapse; }  /*이중선 제거*/
+        th,td{
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+            
+            vertical-align: top;	/* 위 */
+            vertical-align: bottom;   /* 아래 */
+            vertical-align: middle;   /* 가운데 */
+    }
+    #result{
+        font-size: 30px;
+    }
+    </style>
+ 
+</head>
+<body>
+    <div id="container">
+    <h1>다음 조건에 맞게 코드를 작성해주세요.</h1>
+    <p>
+        조건: <br>
+        1. 입력창을 띄워 사용자의 0~100점의 숫자를 받는다.<br><br>
+        2. 입력 받는 점수에 마는 성적의 등급을 나눈다.<br><br>
+        <table>
+            <tr style="background-color: rgba(255, 228, 196, 0.455)">
+                <th>점수</th>
+                <th>90이상</th>
+                <th>80~89점</th>
+                <th>70~79점</th>
+                <th>60~69점</th>
+                <th>60점 미만</th>
+            </tr>
+            <tr>
+                <th style="background-color: rgba(255, 228, 196, 0.455);">학점</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>F</th>
+            </tr>
+        </table><br>
+        3. 나의 기말고사 점수는 __점, 학점은 __!!!
+    </p> <hr>
+    <p>예시) 나의 기말고사 점수는 88점, 학점은 B!!!</p>
+    <p id="result"></p>
+</div>
+
+    <script>
+        const container = document.getElementById("container");
+        let score = parseInt(prompt("기말고사 성적을 입력하세요.")); 
+        let grade ;
+
+        if(score >= 90){
+            grade = "A"
+        } else if(score >= 80 && score < 90) {
+            grade = "B"
+        } else if(score >= 70 && score < 79) {
+            grade = "C"
+        } else if(score >= 60 && score < 69) {
+            grade = "D"
+        } else if( score < 60) {
+            grade = "F"
+        }
+
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `나의 기말고사 점수는 ${score}점, 학점은 ${grade}!`;
+        /*
+        document.querySelector('body').innerHTML을 사용하면 현재 문서의 <body> 요소의 내용 전체를 변경할 수 있습니다. 
+        만약 이 코드를 사용하면, 기존의 HTML 내용은 모두 대체되고 새로운 내용이 주어진 문자열로 대체됨.
+
+        const resultElement = document.getElementById("result"); 
+        resultElement.textContent = ...를 사용하는 경우에는 특정한 요소의 내용만 변경됩니다. 
+        즉, result라는 ID를 가진 요소의 내용만 업데이트되고 나머지 HTML은 그대로 유지됩니다.
+        */
+        
+
+    </script>
+</body>
+</html>

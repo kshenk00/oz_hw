@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>겹치거나 넘치는 요소(overflow)</title>
+    <style>
+        div{ /*공통적으로 박스의 형태를 주도록 한다*/
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .div1 {
+            background-color: orange; z-index: 4;
+            overflow: hidden; /*hidden:넘치는건 안보이게 한다.
+                                scroll: 스크롤해서 넘겨준다
+                                auto: 크룸등의 호환에 맞춰서 해준다
+                                */
+        } 
+        .div2 {background-color: red;bottom: 50px; z-index: 3;}
+        .div3 {background-color: purple;bottom: 100px;z-index: 2;}
+        .div4 {background-color: green;bottom: 150px;z-index: 1;}
+
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        orangeorangeorangeorangeorangeorangeorange
+        orangeorangeorangeorangeorangeorangeorange
+        orangeorangeorangeorangeorangeorange
+        orangeorangeorangeorangeorangeorange
+        orangeorangeorangeorangeorangeorange
+    </div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+
+</body>
+</html>

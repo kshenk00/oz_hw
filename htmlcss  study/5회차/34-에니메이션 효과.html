@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에니메이션 효과</title>
+    <style>
+        .eyes{
+            width: 480px; /* .eye:nth-child(1){ float: left;} 이후 원사이의 거리 조절 */
+            margin: auto; /*수평 방향으로 auto를 사용하면 브라우저는 요소를 가운데 정렬하게 됩니다.*/
+        }
+        .eye{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 100px;
+            position: relative; /*relative으로 한것은 ball 때문에 그렇다.*/
+        }
+
+        /*눈동자를 양옆으로 띄어주는 효과*/
+        .eye:nth-child(1){ float: left;}
+        .eye:nth-child(2){ float: right;} 
+
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 25px;
+            position: absolute; 
+            /*
+            position: absolute으로 눈동자의 위치 이동을 해줄것이다. 특징: absolute가 위치 이동을 할때는 기준을 상위 요소중 position으로 기준으로 한다.
+            ball의 상위 요소는 eye. eye는  position: relativ로 되어있는 position요소이다. 이때 relative가 없으면 기준이 안되서, 필요하다.
+            */
+            top: 80px;
+            left: 30px;
+
+            animation-name: moving; /*어떤 keyframe을 적용하고 싶은지 그 이름을 적어주면 된다*/
+            animation-duration: 2s;
+            animation-delay: 0s; /*지연시간없이 바로 시작한다*/
+            animation-timing-function: linear; /*동일하게 움직이게 만들다*/
+            animation-iteration-count: 3; /*해당 에니메이션을 3번 반복하겠다. 무한하게는 infinite*/
+            animation-direction: alternate; /*alternate: 정방향 역방향 왔다갔다. reverse: 역방향. normal: 정방향*/
+
+            /*
+            단축속성으로는 이렇게 써줘도 동일한 효과 > animation: moving 2s(duration) 0s(dalay) linear infinite alternate; 
+            이때 숫자가 연속으로 올때는 duration > dalay 순으로 진행되어야 돤다.
+            */
+        }
+        .ball:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes moving {
+            from{ left: 30px; }
+            to{ left: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="eyes">
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+
+    </div>
+</body>
+</html>
