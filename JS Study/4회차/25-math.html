@@ -16,17 +16,18 @@
     const button = document.getElementById("draw")
     const p = document.getElementById("number")
 
-    console.log(Math.sqrt(4))
-    console.log(Math.abs(-4))
+    console.log(Math.sqrt(4)) //sqrt 루트 
+    console.log(Math.abs(-4)) //abs > absolute로 절대값을 구해줌. 그래서 콘솔에 그대로 4가 확인됨
 
-    let rn = Math.random()
-    // console.log(rn * 10)
-    console.log(Math.floor(rn * 10) + 1)
-
+    let rn = Math.random() //Math.random()는 0~1 사이의 랜덤 숫자를 반환해준다.
+   /* 
+    console.log(rn * 10) //rn * 10을 해주면 0~10 사이의 숫자를 반환을 해준다.
+    console.log(Math.floor(rn * 10) + 1) //Math.floor(): 주어진 인수의 소수점 이하는 제거해 반환을해준다. +1은 0이 안나오게 해준다.
+  */
     const MAX_NUM = 100
     const MIN_NUM = 1
-    // Math.floor(Math.random() * MAX_NUM) + MIN_NUM
 
+    // 버튼을 누를때마다 랜덤 숫자가 하나씩 화면에 보이게 하기. 버튼을 클릭을 할때마다 p태그에 숫자를 출력하게 하는 로직
     button.addEventListener("click", function(){
       p.textContent = Math.floor(Math.random() * MAX_NUM) + MIN_NUM
     })

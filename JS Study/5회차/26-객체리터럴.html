@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 리터럴</title>
+</head>
+<body>
+
+  <script> 
+    //객체리터럴은 생성자와 비슷하다.
+    //생성자는 객체를 설계한 함수. 생성자에 객체의 내용을 설계하고 생성자 함수를 호출하면 객체가 만들어진다.
+    //객체리터럴: 객체를 이렇게 만들겠다는 선언을 그 자리에서 한다. 
+    
+    //js를 이용하여 고양이라는 생물을 표현을 해보기
+    const cat = {
+      species: "포유류",
+      title: "고양이"
+    }
+
+    console.log(cat)
+    console.log(cat.species) //콘솔에 포유류 확인됨
+    console.log(cat["title"]) // 콘솔에 고양이
+    console.log(typeof cat) //콘솔에 object 확인됨
+
+    //스프레드 연산을 해보기. 배열이나 객체 리터럴의 내부 요소를 복사한다라는 의미의 연산자
+    const gookhee = {
+      ...cat,
+      name: "국희",
+      age: 4, 
+      favorite: ["끈", "창틀" , "햇살"]
+    }
+
+    console.log(gookhee)
+    console.log(gookhee.species)
+    console.log(gookhee.favorite)
+    console.log(...gookhee.favorite) // 스프레드연산을 하게 되면 []를 벗겨내고 그 안의 내용만 그대로 벗겨낸다. 그래서 []가 사라진 형태의 결과 확인됨
+    console.log(typeof gookhee)
+
+  </script>
+</body>
+</html>
