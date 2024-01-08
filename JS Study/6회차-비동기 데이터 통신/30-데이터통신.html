@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데이터 통신</title>
+</head>
+<body>
+
+  <button id="push">PUSH</button> <!--push 버튼을 누르면 강아지 사진이 나한테 온다-->
+  <hr />
+  <img src="" alt="강아지 사진"> <!--소스 없는 이미지-->
+
+  <script>
+    
+    // 일부만 DOM을 변경해줄수 있게 하는것은 비동기 데이터 통신이라 한다!
+
+    const request = new XMLHttpRequest()
+    const button = document.getElementById("push") //push버튼을 눌렀을때 이 request를 수행되길 원해서
+
+    button.addEventListener("click", function(){
+        request.open("get", "https://dog.ceo/api/breeds/image/random")
+        request.addEventListener("load", function(){
+        const result = JSON.parse(request.response)
+        const img = document.querySelector("img")
+        img.src = result.message
+        }) 
+        request.send()  //버튼을 클릭을 했을때 랜덤 이미지 달라고 하는 요청을 get방식으로 보낸다. // 이때 강아지 사진은 객체로 들어온다.
+    })
+    
+
+    /*
+
+    //요청을 보내기
+      1. new XMLHttpRequest()을 먼저 생성을 해준다. 
+      2. const request = new XMLHttpRequest() //1을 삭제하고 2부터 시작
+      3. request.open("get", "https://dog.ceo/api/breeds/image/random") //"여기 안의 주소에다가" 요청을 보내고 싶다는 의미 > get메소드에 해당 주소로 요청을 보낸다는 의미
+      5. request.addEventListener("load", function{console.log(JSON.parse(request.respose))}) //>콘솔에 보면 이미지가 왔다는 것을 문자열로 받음.
+      4. request.send() //send를 해줘야 실제로 보내진다.
+
+    //응답을 처리하는 코드
+      5. request.addEventListener를 위에 넣어줘야됨
+      5. 콘솔에서 이미지가 왔다는 것을 문자열로 받았을시 JSON.parse할 수 있다. > 그렇게 되면 객체 형태로 받는 것을 확인 할 수 있음
+
+
+    */
+
+  </script>
+</body>
+</html>
