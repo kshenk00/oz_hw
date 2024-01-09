@@ -6,11 +6,11 @@ html, body{
   margin: 0;
 }
 #container{
-  width: 100%;
+  width: 100%; /*화면 너비에 맞춰서 확장하게끔 해줌*/
   max-width: 640px;
-  margin: auto;
+  margin: auto; /*좌우여백에 맟춘다*/
 }
-header{
+header{ /*header는 위 필터링 부분. container의 자식이기에 width,max-width, height는 맞춰줌*/
   width: 100%;
   max-width: 640px;
   height: 60px;
@@ -19,24 +19,24 @@ header{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: fixed; /*스크롤이 올라가도 헤더는 그대로 유지하기 위해*/
   top: 0;
 }
 .header__search{
-  display: flex;
+  display: flex; /*input과 필터링을 양옆으로 하게 하고 싶어서*/
   align-items: center;
 }
 input, button, select{
   height: 30px;
   border: 0.5px solid gray;
 }
-main{
+main{ /*강아지가 표시되는 영역*/
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: wrap;/*여러줄로 정렬되게 만들어주다*/
   margin-top: 60px;
 }
-img{ 
+img{ /*이미지 사이즈 맞춰주기*/
   width: 200px; 
   height: 200px; 
 }
