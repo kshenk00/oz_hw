@@ -43,6 +43,7 @@
         background: black;
         padding: 5px 5px ;
         border-radius: 5px;
+       
         
       }
 
@@ -64,6 +65,8 @@
         font-size: 28px;
         line-height: 1; /*텍스트 줄 사이의 간격을 최소화하고 텍스트가 더 밀접하게 배치 > 글자들이 더 밀접하게 배치된다*/
         margin: 20px 0 5px; /*숫자와 글씨의 간격을 줄이기 위해*/
+        padding-top: 10px;
+        
       }
 
       small {
@@ -133,14 +136,16 @@
     </div>
   
     <script>
+
+      
       // JavaScript로 타이머 구현
 
-      const days = document.querySelector("days");
-      const hours = document.querySelector("hours");
-      const minutes = document.querySelector("minutes");
-      const seconds = document.querySelector("seconds");
+      const days = document.querySelector("#days");
+      const hours = document.querySelector("#hours");
+      const minutes = document.querySelector("#minutes");
+      const seconds = document.querySelector("#seconds");
 
-
+/*
       //디데이 설정
       let targetDate = moment("6/30/2024");
 
@@ -150,7 +155,31 @@
       const now = new date("");
 
       //현재 시분초가 필요하다
+      */
 
+      function updateTimer() {
+    const future = Date.parse("2024/06/30 00:00:00");
+    const now = new Date();
+    const diff = future - now;
+
+    const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+    const hours = Math.floor(diff / (1000 * 60 * 60)) ;
+    const mins = Math.floor(diff / (1000 * 60));
+    const secs = Math.floor(diff / 1000);
+
+    const days = Math.floor(diff / (24 * 60 * 60 * 1000));
+    const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+    const minutes = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
+    const seconds = Math.floor((diff % (60 * 1000)) / 1000);
+
+    daysElement.textContent = days.toString().padStart(2, '0');
+    hoursElement.textContent = hours.toString().padStart(2, '0');
+    minutesElement.textContent = minutes.toString().padStart(2, '0');
+    secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+}
+
+setInterval(updateTimer, 1000);
 
 
     </script>
