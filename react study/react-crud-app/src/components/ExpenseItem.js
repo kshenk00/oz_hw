@@ -7,15 +7,15 @@ export default class ExpenseItem extends Component {
     return (
     <li className='item'>
         <div className='info'>
-          <span className='expanse'>빵</span>
-          <span className='amount'>100원</span>
+          <span className='expanse'>{this.props.expense.charge}</span>
+          <span className='amount'>{this.props.expense.amount}</span>
       </div>
       <div>
         <button className='edit-btn' >
           <MdEdit />
         </button>
         
-        <button className='clear-btn' >
+        <button onClick={() => this.props.handleDelete(this.props.expense.id)} className='clear-btn' >
           <MdDelete />
         </button>
       </div>
