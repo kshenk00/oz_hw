@@ -6,3 +6,8 @@
 .image-container {
     flex: 0 0 auto; /* 이미지 컨테이너의 크기를 고정으로 설정 */
 }
+
+.Tip {
+    flex-wrap: wrap;
+    align-items: center; 
+}
